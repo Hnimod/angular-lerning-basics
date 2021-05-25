@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from './services/users.service';
 
 @Component({
   selector: 'app-assignments',
@@ -6,18 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./assignments.component.css'],
 })
 export class AssignmentsComponent implements OnInit {
-  oddNumbers: number[] = [];
-  evenNumbers: number[] = [];
-
   constructor() {}
 
   ngOnInit(): void {}
-
-  onIntervalFired(firedNumber: number) {
-    if (firedNumber % 2 === 0) {
-      this.evenNumbers.push(firedNumber);
-    } else {
-      this.oddNumbers.push(firedNumber);
-    }
-  }
 }
